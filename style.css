@@ -1,0 +1,164 @@
+body {
+    background-color: #ccf5ff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    width: 340px;
+    height: 460px;
+    background: #f5e4ef;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+/* Конверт */
+.envelope {
+    position: relative;
+    width: 220px;
+    height: 140px;
+    background: #ffb6c1;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    border-top: 80px solid #ff758f;
+}
+
+.heart-seal {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+.title-text {
+    margin-top: 25px;
+    color: #d81b60;
+    text-align: center;
+}
+
+.title-text h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Лук */
+.bow-container {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: grab;
+    user-select: none;
+}
+
+.bow-container:active {
+    cursor: grabbing;
+}
+
+.hint-text {
+    font-size: 11px;
+    color: #d81b60;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+/* Окно с вопросом */
+.popup {
+    width: 340px;
+    background: white;
+    border: 3px solid #ff4d6d;
+    border-radius: 16px;
+    box-shadow: 0px 12px 30px rgba(0,0,0,0.2);
+    position: absolute;
+}
+
+.popup-header {
+    background: #ff4d6d;
+    color: white;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.popup-controls span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: white;
+    margin-left: 4px;
+    border-radius: 50%;
+}
+
+.popup-body {
+    /* Розовый фон с клеткой */
+    background-color: #ffb6c1;
+    background-image: 
+        linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%), 
+        linear-gradient(-45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.3) 75%), 
+        linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.3) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    padding: 20px;
+    text-align: center;
+}
+
+.cat-gif {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.btn-group {
+    margin-top: 20px;
+    position: relative;
+    height: 50px;
+}
+
+button {
+    padding: 10px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#noBtn {
+    background-color: #adb5bd;
+    color: white;
+    position: absolute;
+    transition: 0.1s ease;
+}
